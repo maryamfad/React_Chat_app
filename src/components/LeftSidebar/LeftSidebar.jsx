@@ -12,7 +12,6 @@ const LeftSidebar = () => {
 				<div className="left-sidebar-nav">
 					<div className="logo">
 						<PiChatsBold size={130} />
-
 						<p>Chat App</p>
 					</div>
 					<div className="menu">

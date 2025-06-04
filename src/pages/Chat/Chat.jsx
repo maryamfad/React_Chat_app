@@ -9,8 +9,8 @@ const Chat = () => {
 		<div className="chat">
 			<div className="chat-container">
 				<LeftSidebar />
-				{/* <ChatBox />
-				<RightSidebar /> */}
+				<ChatBox />
+				<RightSidebar />
 			</div>
 		</div>
 	);
