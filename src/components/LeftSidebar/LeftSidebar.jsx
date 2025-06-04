@@ -11,11 +11,16 @@ const LeftSidebar = () => {
 			<div className="left-sidebar-top">
 				<div className="left-sidebar-nav">
 					<div className="logo">
-						<PiChatsBold size={130} />
+						<PiChatsBold size={40} />
 						<p>Chat App</p>
 					</div>
 					<div className="menu">
-						<TiThMenuOutline size={16} />
+						<TiThMenuOutline className="menu-icon" size={16} />
+						<div className="sub-menu">
+							<p>Edit Profile</p>
+							<hr />
+							<p>Logout</p>
+						</div>
 					</div>
 				</div>
 				<div className="left-sidebar-search">
