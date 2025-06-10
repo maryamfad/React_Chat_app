@@ -16,6 +16,9 @@
 }
 .login-form {
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .login-form form {
 	background: white;
@@ -24,9 +27,7 @@
 	flex-direction: column;
 	gap: 20px;
 	border-radius: 10px;
-	/* width: 100%; */
 	width: 50%;
-	margin: 10%;
 }
 
 .login-form form h2 {

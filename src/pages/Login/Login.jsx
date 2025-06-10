@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { PiChatsBold } from "react-icons/pi";
-import { signup } from "../../config/firebase";
+import { login, signup } from "../../config/firebase";
 
 const Login = () => {
 	const [currentState, setCurrentState] = useState("Sign Up");
@@ -13,6 +13,8 @@ const Login = () => {
 		event.preventDefault();
 		if (currentState === "Sign Up") {
 			signup(username, email, password);
+		} else {
+			login(email, password);
 		}
 	};
 
