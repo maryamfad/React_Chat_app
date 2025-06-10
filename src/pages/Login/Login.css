@@ -11,18 +11,25 @@
 	color: white;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	font-size: xx-large;
+	font-weight: bold;
+	width: 100%;
 }
-
 .login-form {
+	width: 100%;
+}
+.login-form form {
 	background: white;
 	padding: 20px 30px;
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	border-radius: 10px;
+	/* width: 100%; */
+	width: 50%;
+	margin: 10%;
 }
 
-.login-form h2 {
+.login-form form h2 {
 	font-weight: 500;
 }
 
