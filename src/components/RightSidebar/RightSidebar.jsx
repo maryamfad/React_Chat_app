@@ -1,6 +1,7 @@
 import React from "react";
 import "./RightSidebar.css";
 import { FaCircle } from "react-icons/fa";
+import { logout } from "../../config/firebase";
 
 const RightSidebar = () => {
 	return (
@@ -25,7 +26,7 @@ const RightSidebar = () => {
 					<img src={"/pic6.avif"} alt="" />
 				</div>
 			</div>
-			<button>Logout</button>
+			<button onClick={() => logout()}>Logout</button>
 		</div>
 	);
 };
