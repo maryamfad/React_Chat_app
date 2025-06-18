@@ -4,8 +4,11 @@ import { PiChatsBold } from "react-icons/pi";
 import { TiThMenuOutline } from "react-icons/ti";
 import { FaSearch } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const LeftSidebar = () => {
+	const navigate = useNavigate();
+
 	return (
 		<div className="left-sidebar">
 			<div className="left-sidebar-top">
@@ -17,7 +20,9 @@ const LeftSidebar = () => {
 					<div className="menu">
 						<TiThMenuOutline className="menu-icon" size={16} />
 						<div className="sub-menu">
-							<p>Edit Profile</p>
+							<p onClick={() => navigate("/profile")}>
+								Edit Profile
+							</p>
 							<hr />
 							<p>Logout</p>
 						</div>

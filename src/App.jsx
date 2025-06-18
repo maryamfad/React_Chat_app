@@ -14,7 +14,7 @@ const App = () => {
 	useEffect(() => {
 		onAuthStateChanged(auth, async (user) => {
 			if (user) {
-				navigate("/chat");
+				// navigate("/chat");
 				await loadUserData(user.uid);
 			} else {
 				navigate("/");
