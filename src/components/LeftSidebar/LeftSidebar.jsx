@@ -18,7 +18,8 @@ const LeftSidebar = () => {
 			const userRef = collection(db, "users");
 			const q = query(
 				userRef,
-				where("username", "==", input.toLowerCase())
+				where("username", ">=", input.toLowerCase()),
+				where("username", "<", input.toLowerCase() + "\uf8ff")
 			);
 			const querySnap = await getDocs(q);
 			if (!querySnap.empty) {
