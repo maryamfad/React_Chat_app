@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./LeftSidebar.css";
 import { PiChatsBold } from "react-icons/pi";
 import { TiThMenuOutline } from "react-icons/ti";
@@ -8,9 +8,11 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../config/firebase";
+import { AppContext } from "../../context/AppContext";
 
 const LeftSidebar = () => {
 	const navigate = useNavigate();
+	const { userData } = useContext(AppContext);
 
 	const inputHandler = async (e) => {
 		try {
@@ -22,7 +24,10 @@ const LeftSidebar = () => {
 				where("username", "<", input.toLowerCase() + "\uf8ff")
 			);
 			const querySnap = await getDocs(q);
-			if (!querySnap.empty) {
+			if (
+				!querySnap.empty &&
+				querySnap.docs[0].data().id !== userData.id
+			) {
 				console.log(querySnap.docs[0].data());
 			}
 		} catch (error) {
