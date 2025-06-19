@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./Login.css";
 import { PiChatsBold } from "react-icons/pi";
 import { login, signup } from "../../config/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+	const navigate = useNavigate();
 	const [currentState, setCurrentState] = useState("Sign Up");
 	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState("");
@@ -16,6 +18,7 @@ const Login = () => {
 		} else {
 			login(email, password);
 		}
+		navigate("/chat");
 	};
 
 	return (

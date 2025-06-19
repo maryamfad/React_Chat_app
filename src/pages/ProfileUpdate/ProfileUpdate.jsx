@@ -51,13 +51,10 @@ const ProfileUpdate = () => {
 
 	useEffect(() => {
 		onAuthStateChanged(auth, async (user) => {
-			console.log("user", user);
-
 			if (user) {
 				setUid(user.uid);
 				const docRef = doc(db, "users", user.uid);
 				const docSnap = await getDoc(docRef);
-				console.log("docSnap", docSnap.data());
 
 				if (docSnap.data().name) {
 					setName(docSnap.data().name);
